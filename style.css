@@ -31,8 +31,6 @@ body.dark-mode .container {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-/* ... (kode CSS lainnya) ... */
-
 header {
     display: flex;
     justify-content: space-between;
@@ -40,19 +38,42 @@ header {
     margin-bottom: 2rem;
 }
 
+/* Language Selector & Theme Toggle */
 .header-buttons {
     display: flex;
     align-items: center;
-    gap: 10px; /* Jarak antara tulisan dan slider */
+    gap: 15px; /* Jarak antara dropdown dan slider */
+}
+
+#language-selector {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%236c757d%22%20d%3D%22M287%20146.2c0%204.3-1.4%208.5-4.2%2011.6L149.6%20281.8c-6.1%206.1-16.1%206.1-22.2%200l-133.2-124c-2.8-3.1-4.2-7.3-4.2-11.6s1.4-8.5%204.2-11.6L127.4%207.2c6.1-6.1%2016.1-6.1%2022.2%200l133.2%20124c2.8%203.1%204.2%207.3%204.2%2011.6z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 10px;
+    padding-right: 30px;
+}
+
+body.dark-mode #language-selector {
+    background-color: #2e2e2e;
+    color: #eee;
+    border-color: #555;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23e0e0e0%22%20d%3D%22M287%20146.2c0%204.3-1.4%208.5-4.2%2011.6L149.6%20281.8c-6.1%206.1-16.1%206.1-22.2%200l-133.2-124c-2.8-3.1-4.2-7.3-4.2-11.6s1.4-8.5%204.2-11.6L127.4%207.2c6.1-6.1%2016.1-6.1%2022.2%200l133.2%20124c2.8%203.1%204.2%207.3%204.2%2011.6z%22%2F%3E%3C%2Fsvg%3E');
 }
 
 .theme-toggle-label {
     font-weight: 600;
 }
 
-/* ... (kode CSS lainnya) ... */
-
-/* Theme Toggle Slider */
 .switch {
     position: relative;
     display: inline-block;
