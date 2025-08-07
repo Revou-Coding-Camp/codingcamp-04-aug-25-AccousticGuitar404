@@ -13,6 +13,12 @@
             <header>
                 <h1 id="welcome-message">To-Do List</h1>
                 <div class="header-buttons">
+                    <select id="language-selector">
+                        <option value="id">🇮🇩 Bahasa Indonesia</option>
+                        <option value="en">🇬🇧 English</option>
+                        <option value="de">🇩🇪 Deutsch</option>
+                        <option value="ko">🇰🇷 한국어</option>
+                    </select>
                     <label class="theme-toggle-label" for="mode-toggle">Ganti Tema</label>
                     <div class="toggle-container">
                         <label class="switch">
@@ -28,7 +34,7 @@
             </form>
 
             <div class="filters">
-                <p>Filter tugas:</p>
+                <p id="filter-text">Filter tugas:</p>
                 <div class="filter-buttons">
                     <button id="filter-all" class="active">Semua</button>
                     <button id="filter-active">Aktif</button>
