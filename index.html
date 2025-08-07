@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+</head>
+<body>
+    <div class="container">
+        <div id="todo-screen">
+            <header>
+                <h1 id="welcome-message">To-Do List</h1>
+                <div class="header-buttons">
+                    <label class="theme-toggle-label" for="mode-toggle">Ganti Tema</label>
+                    <div class="toggle-container">
+                        <label class="switch">
+                            <input type="checkbox" id="mode-toggle">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+            </header>
+
+            <form id="todo-form">
+                <input type="text" id="todo-input" placeholder="Tambah tugas baru...">
+            </form>
+
+            <div class="filters">
+                <p>Filter tugas:</p>
+                <div class="filter-buttons">
+                    <button id="filter-all" class="active">Semua</button>
+                    <button id="filter-active">Aktif</button>
+                    <button id="filter-completed">Selesai</button>
+                </div>
+            </div>
+
+            <ul id="todo-list"></ul>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

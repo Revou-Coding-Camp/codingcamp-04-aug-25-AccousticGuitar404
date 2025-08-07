@@ -1,0 +1,266 @@
+/* General Body & Typography */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+body.dark-mode {
+    background: linear-gradient(135deg, #2c3e50 0%, #4a69bd 100%);
+    color: #e0e0e0;
+}
+
+/* Container & Layout */
+.container {
+    background-color: #fff;
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    width: 90%;
+    max-width: 600px;
+    transition: box-shadow 0.3s ease;
+}
+
+body.dark-mode .container {
+    background-color: #1e1e1e;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* ... (kode CSS lainnya) ... */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.header-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Jarak antara tulisan dan slider */
+}
+
+.theme-toggle-label {
+    font-weight: 600;
+}
+
+/* ... (kode CSS lainnya) ... */
+
+/* Theme Toggle Slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 28px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(20px);
+}
+
+/* To-Do List Items */
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
+body.dark-mode h1 {
+    color: #fff;
+}
+
+#todo-form {
+    margin-bottom: 2rem;
+}
+
+#todo-input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+body.dark-mode #todo-input {
+    background-color: #2e2e2e;
+    border-color: #555;
+    color: #eee;
+}
+
+input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.2s ease;
+}
+
+body.dark-mode li {
+    background-color: #2e2e2e;
+}
+
+li:hover {
+    background-color: #f1f1f1;
+}
+
+body.dark-mode li:hover {
+    background-color: #3a3a3a;
+}
+
+.todo-text {
+    word-wrap: break-word;
+    word-break: break-all;
+    flex-grow: 1;
+}
+
+.todo-text.completed {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.timestamps {
+    font-size: 0.8rem;
+    color: #888;
+    margin-top: 5px;
+}
+
+.buttons-container {
+    display: flex;
+    gap: 8px;
+    margin-left: 15px;
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.complete-btn {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.complete-btn:hover {
+    background-color: #218838;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+}
+
+/* Filters */
+.filters {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.filters p {
+    margin-right: 15px;
+    font-weight: 600;
+}
+
+.filter-buttons button {
+    background-color: #e9ecef;
+    color: #333;
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+}
+
+.filter-buttons button:hover {
+    background-color: #d8dbe0;
+}
+
+.filter-buttons button.active {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+}
+
+body.dark-mode .filter-buttons button {
+    background-color: #333;
+    color: #eee;
+    border-color: #555;
+}
+
+body.dark-mode .filter-buttons button:hover {
+    background-color: #444;
+}
+
+body.dark-mode .filter-buttons button.active {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Utility Classes */
+.hidden {
+    display: none !important;
+}
